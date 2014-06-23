@@ -1,22 +1,25 @@
 %
 O0010 (STANDARD BOLT CIRCLE - REV 1 - Z.N.)
-
 ( SET PARAMETERS HERE )
 #1 = 10.0	(A = bolt circle diameter)
 #2 = 8.0	(B = number of holes)
-#3 = .1		(D = G99 retract for all tools)
-#7 = -.2	(C = spot depth)
+#3 = .1		(C = G99 retract for all tools)
+#7 = -.2	(D = spot depth)
 #8 = 10.0	(E = spot feed)
 #9 = .08	(F = peck depth)
-#11 = 1.0	(G = final hole depth)
-#4 = 10.0	(H = drill feed)
-#5 = .500	(I = tap depth)
-#6 = 10.0	(J = tap feed)
+#11 = 1.0	(H = final hole depth)
+#4 = 10.0	(I = drill feed)
+#5 = .500	(J = tap depth)
+#6 = 10.0	(K = tap feed)
+#13 = 100	(M = spot spindle speed)
+#17 = 100	(Q = drill spindle speed)
+#18 = 100 	(R = tap spindle speed)
+(IF MAKING CHANGES BELOW THIS LINE, SAVE AS NEW PROGRAM IN MACHINE)
 
 T1 (SPOT DRILL)
 M6
 G0 G90  X[#1 / 2.] Y0. A0.
-S0000 M3
+S#13 M3
 G43 Z3. H1
 M8
 M98 P0011 L#2
@@ -29,7 +32,7 @@ M1
 T2 (DRILL)
 M6
 G0 G90  X[#1 / 2.] Y0. A0.
-S0000 M3
+S#17 M3
 G43 Z3. H2
 M8
 M98 P0012 L#2
@@ -46,7 +49,7 @@ M1
 T4 (tap)
 M6
 G0 G90  X[#1 / 2.] Y0. A0.
-S0000 M3
+S#18 M3
 G43 Z3. H4
 M8
 M98 P0014 L#2
