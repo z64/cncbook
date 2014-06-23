@@ -5,8 +5,11 @@ O0010 (STANDARD BOLT CIRCLE - REV 1 - Z.N.)
 #1 = 10.0	(A = bolt circle diameter)
 #2 = 8.0	(B = number of holes)
 #3 = -.2	(C = spot depth)
-#7 = .1		(D = spot retract)
-#8 = 10.0	(F = spot feed)
+#7 = .1		(D = global retract)
+#8 = 10.0	(E = spot feed)
+#9 = .08	(F = peck depth)
+#11 = 1.0	(G = final hole depth)
+#4 = 10.0	(H = drill feed)
 
 T1 (SPOT DRILL)
 M6
@@ -55,11 +58,17 @@ M30
 O0011 (spot sub)
 G0 Z.1
 G98 G81 Z#3 R#7 F#8
+G80
 G91 A[360.0 / #2]
 G90
 M99
 
 O0012 (drill sub)
+G0 Z.1
+G83 Z#9 R#7 Q#9 F#4
+G80
+G91 A[360.0 / #2]
+G90
 M99
 
 O0013 (c'bore sub)
@@ -67,5 +76,10 @@ O0013 (c'bore sub)
 M99
 
 O0014 (tap sub)
+G0 Z.1
+G98 G81 Z#3 R#7 F#8
+G80
+G91 A[360.0 / #2]
+G90
 M99
 %
