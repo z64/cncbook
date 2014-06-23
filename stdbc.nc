@@ -46,7 +46,7 @@ M1
 (tbd)
 M1
 
-T4 (tap)
+T4 (TAP)
 M6
 G0 G90  X[#1 / 2.] Y0. A0.
 S#18 M3
@@ -60,7 +60,7 @@ G91 G28 Z0.
 M30
 
 
-O0011 (spot sub)
+O0011 (STD BC SPOT SUB)
 G0 Z.1
 G98 G81 Z#7 R#3 F#8
 G80
@@ -68,7 +68,7 @@ G91 A[360.0 / #2]
 G90
 M99
 
-O0012 (drill sub)
+O0012 (STD BC DRILL SUB)
 G0 Z.1
 G83 Z#9 R#3 Q#9 F#4
 G80
@@ -76,11 +76,11 @@ G91 A[360.0 / #2]
 G90
 M99
 
-O0013 (c'bore sub)
+O0013 (STD BC CBORE SUB)
 (tbd)
 M99
 
-O0014 (tap sub)
+O0014 (STD BC TAP SUB)
 G0 Z.1
 G98 G84 Z#5 R#3 F#6
 G80
