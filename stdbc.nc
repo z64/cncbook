@@ -1,5 +1,6 @@
 %
-O0010 (STANDARD BOLT CIRCLE - V0.2 - Z.N.)
+O0010 (STANDARD BOLT CIRCLE - V0.3 - Z.N.)
+G54 G17 G20 G80
 ( SET PARAMETERS HERE )
 #1 = 10.0	(A = bolt circle diameter)
 #2 = 8.0	(B = number of holes)
