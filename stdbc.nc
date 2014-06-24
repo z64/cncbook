@@ -42,9 +42,9 @@ M9
 G91 G28 Z0.
 M1
 
-(c'bore)
-(tbd)
-M1
+/(c'bore)
+/(tbd)
+/M1
 
 T4 (TAP)
 M6
@@ -74,10 +74,6 @@ G83 Z#9 R#3 Q#9 F#4
 G80
 G91 A[360.0 / #2]
 G90
-M99
-
-O0013 (STD BC CBORE SUB)
-(tbd)
 M99
 
 O0014 (STD BC TAP SUB)
